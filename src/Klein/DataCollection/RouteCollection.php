@@ -56,7 +56,7 @@ class RouteCollection extends DataCollection
      * @param Route|callable $value         The value of the route to set
      * @return RouteCollection
      */
-    public function set($key, $value)
+    public function set(string $key, $value): self
     {
         if (!$value instanceof Route) {
             $value = new Route($value);
@@ -73,7 +73,7 @@ class RouteCollection extends DataCollection
      * @param Route $route
      * @return RouteCollection
      */
-    public function addRoute(Route $route)
+    public function addRoute(Route $route): self
     {
         /**
          * Auto-generate a name from the object's hash
@@ -95,7 +95,7 @@ class RouteCollection extends DataCollection
      * @param Route|callable $route
      * @return RouteCollection
      */
-    public function add($route)
+    public function add(Route|callable $route): self
     {
         if (!$route instanceof Route) {
             $route = new Route($route);
@@ -116,7 +116,7 @@ class RouteCollection extends DataCollection
      *
      * @return RouteCollection
      */
-    public function prepareNamed()
+    public function prepareNamed(): self
     {
         // Create a new collection so we can keep our order
         $prepared = new static();

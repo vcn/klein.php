@@ -57,7 +57,7 @@ class ResponseCookieDataCollection extends DataCollection
      * @param ResponseCookie|string $value  The value of the cookie to set
      * @return ResponseCookieDataCollection
      */
-    public function set($key, $value)
+    public function set(string $key, $value): self
     {
         if (!$value instanceof ResponseCookie) {
             $value = new ResponseCookie($key, $value);
