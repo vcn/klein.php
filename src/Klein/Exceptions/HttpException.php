@@ -11,6 +11,7 @@
 
 namespace Klein\Exceptions;
 
+use JetBrains\PhpStorm\Pure;
 use RuntimeException;
 
 /**
@@ -31,8 +32,8 @@ class HttpException extends RuntimeException implements HttpExceptionInterface
      * @param int $code
      * @return HttpException
      */
-    public static function createFromCode($code)
+    #[Pure] public static function createFromCode(int $code): HttpException
     {
-        return new static(null, (int) $code);
+        return new static("", (int) $code);
     }
 }
