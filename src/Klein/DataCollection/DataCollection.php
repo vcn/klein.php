@@ -25,7 +25,7 @@ use IteratorAggregate;
  * Inspired by @fabpot's Symfony 2's HttpFoundation
  * @link https://github.com/symfony/HttpFoundation/blob/master/ParameterBag.php
  */
-class DataCollection extends RouteCollection implements IteratorAggregate, ArrayAccess, Countable
+class DataCollection implements IteratorAggregate, ArrayAccess, Countable
 {
 
     /**
@@ -55,13 +55,13 @@ class DataCollection extends RouteCollection implements IteratorAggregate, Array
     }
 
     /**
-     * Returns all of the key names in the collection
+     * Returns all the key names in the collection
      *
      * If an optional mask array is passed, this only
      * returns the keys that match the mask
      *
-     * @param array|null $mask               The parameter mask array
-     * @param boolean $fill_with_nulls  Whether or not to fill the returned array with
+     * @param array|null $mask          The parameter mask array
+     * @param boolean $fill_with_nulls  Whether to fill the returned array with
      *  values to match the given mask, even if they don't exist in the collection
      * @return array
      */
