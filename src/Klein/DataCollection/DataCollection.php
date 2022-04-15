@@ -147,7 +147,7 @@ class DataCollection implements IteratorAggregate, ArrayAccess, Countable
      * @param mixed  $default_val   The default value of the parameter if it contains no value
      * @return mixed
      */
-    public function get(string $key, string|null $default_val = null): mixed
+    public function get(string $key, mixed $default_val = null): mixed
     {
         if (isset($this->attributes[$key])) {
             return $this->attributes[$key];
