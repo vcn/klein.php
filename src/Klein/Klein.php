@@ -1083,7 +1083,7 @@ class Klein
      */
     public function skipThis()
     {
-        throw new DispatchHaltedException(null, DispatchHaltedException::SKIP_THIS);
+        throw new DispatchHaltedException("", DispatchHaltedException::SKIP_THIS);
     }
 
     /**
@@ -1095,7 +1095,7 @@ class Klein
      */
     public function skipNext($num = 1)
     {
-        $skip = new DispatchHaltedException(null, DispatchHaltedException::SKIP_NEXT);
+        $skip = new DispatchHaltedException("", DispatchHaltedException::SKIP_NEXT);
         $skip->setNumberOfSkips($num);
 
         throw $skip;
@@ -1109,7 +1109,7 @@ class Klein
      */
     public function skipRemaining()
     {
-        throw new DispatchHaltedException(null, DispatchHaltedException::SKIP_REMAINING);
+        throw new DispatchHaltedException("", DispatchHaltedException::SKIP_REMAINING);
     }
 
     /**
